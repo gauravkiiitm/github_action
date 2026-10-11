@@ -7,7 +7,7 @@ import pandas as pd
 #     sys.exit(1)
 
 # Load the raw dataset (step 1)
-df = pd.read_csv(r"C:\Users\gaura\projects\github_action\raw_data\\WHR2023.csv")
+df = pd.read_csv(r"C:\Users\gaura\projects\github_action\raw_data\WHR2023.csv")
 
 # Rename columns to more descriptive names (step 2)
 df.columns = [
@@ -42,4 +42,4 @@ print(df.isnull().sum())
 print(df.head())
 
 # Save the cleaned and normalized dataset to a new CSV file (step 4)
-df.to_csv("processed_data\\WHR2023_cleaned.csv", index=False)
+df.to_csv(r"C:\Users\gaura\projects\github_action\processed_data_1\WHR2023_cleaned.csv", index=False)
