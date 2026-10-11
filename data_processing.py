@@ -7,7 +7,7 @@ import pandas as pd
 #     sys.exit(1)
 
 # Load the raw dataset (step 1)
-df = pd.read_csv(r"C:\Users\gaura\projects\github_action\raw_data\WHR2023.csv")
+df = pd.read_csv(r"C:\Users\gaura\projects\github_action\raw_data\\WHR2023.csv")
 
 # Rename columns to more descriptive names (step 2)
 df.columns = [
