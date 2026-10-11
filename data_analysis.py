@@ -11,7 +11,7 @@ import seaborn as sns
 #     sys.exit(1)
 
 # Load the clean dataset (step 1)
-df = pd.read_csv(r"C:\Users\gaura\projects\github_action\processed_data\WHR2023_cleaned.csv")
+df = pd.read_csv(r"./processed_data/WHR2023_cleaned.csv")
 
 # Data summary (step 2)
 print("Data Summary:")
@@ -27,7 +27,7 @@ info = buffer.getvalue()
 
 ## Write metrics to file
 with open("processed_data/summary.txt", "w") as outfile:
-    f"\n## Data Summary\n\n{summary}\n\n## Data Info\n\n{info}\n\n## Dataframe\n\n{data_head}"
+    outfile.write(f"\n## Data Summary\n\n{summary}\n\n## Data Info\n\n{info}\n\n## Dataframe\n\n{data_head}")
 
 print("Data summary saved in processed_data folder!")
 
